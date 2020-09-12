@@ -1,0 +1,112 @@
+.main__about_map
+  width: 50%
+  height: 400px
+
+.main__about
+  margin-top: 84px
+  margin-bottom: 85px
+
+  &_content
+    margin-top: 40px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+    &_text
+      width: 44%
+
+      & p
+        margin-bottom: 30px
+
+  &_button
+    display: block
+    margin-top: 30px
+    width: 191px
+    padding: 20px 0
+    text-align: center
+
+.main__about_head__line
+  background: #000
+
+.map_region
+  fill: red !important
+
+@media screen and (max-width: 900px)
+  .main__about_content
+    flex-direction: column
+
+  .main__about_content_text
+    width: 100%
+    @include flexColumn
+    margin-bottom: 50px
+
+  .main__about_map
+    width: 100%
+
+
+.placemark
+  position: absolute
+  opacity: 0
+  cursor: pointer
+
+.hover-text
+  display: flex
+  top: 0
+  left: 0
+  position: absolute
+  width: 180px
+  height: 90px
+  background: #ffffff
+  opacity: 0
+  transition: opacity 0.5s
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+  border-radius: 4px
+  padding: 5px 15px
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+
+  & p
+    margin-bottom: 10px
+
+
+  &:after
+    content: ''
+    position: absolute
+    left: 75px
+    bottom: -20px
+    border: 10px solid transparent
+    border-top: 10px solid #fff
+
+
+.show
+  opacity: 1
+
+
+#placemark1
+  top: 15%
+  left: 14.4%
+
+#placemark2
+  top: 35.2%
+  left: 32.4%
+
+#placemark3
+  top: 44%
+  left: 58.25%
+#placemark4
+  top: 62.2%
+  left: 28.8%
+
+#placemark5
+  top: 63.1%
+  left: 38.7%
+#placemark6
+  top: 59.8%
+  left: 84%
+
+#placemark7
+  top: 79.2%
+  left: 23.7%
+

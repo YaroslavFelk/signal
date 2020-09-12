@@ -1,0 +1,13 @@
+.slick-item {
+  height: 150px;
+}
+.slick-item img {
+  height: 100%;
+  width: auto;
+}
+
+.slick__arrows {
+  top: 40%;
+}
+
+/*# sourceMappingURL=style.css.map */

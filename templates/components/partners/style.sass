@@ -1,0 +1,78 @@
+.slick-item
+  width: 100%
+
+  & div
+    padding: 0 20px
+    width: 100%
+    display: flex
+    align-items: center
+
+.slick__arrows_partners
+  top: calc(50% - 45px)
+
+.main__partners
+  height: 400px
+
+.main__partners_particles
+  min-height: 200px
+  height: 400px
+
+.main__partners_head
+  position: relative
+  color: $whiteColor
+  padding-top: 85px
+
+.slick_item_block
+  position: relative
+  @include flexRow
+  & img
+    opacity: 0
+    z-index: 15
+
+
+  &:hover img
+    opacity: 1
+
+  &:hover .background
+    opacity: 0
+
+.background
+  padding: 0 !important
+  position: absolute
+  width: auto !important
+  top: 0
+  left: 20px
+  right: 20px
+  bottom: 0
+  background: #fff
+  -webkit-mask-size: contain
+  mask-size: contain
+  -webkit-mask-repeat: no-repeat
+  mask-repeat: no-repeat
+  -webkit-mask-position: center
+  mask-position: center
+
+
+
+
+
+@media (max-width: 1440px)
+  .main__partners_slider
+    padding-left: 50px
+    padding-right: 50px
+
+
+@media (max-width: 1440px)
+
+  .slick-item div
+    padding: 0
+
+@media (max-width: 1140px)
+  .main__partners_slider
+    padding-left: 50px
+    padding-right: 50px
+
+@media (max-width: 800px)
+  .main__partners_slider
+    padding-left: 0
+    padding-right: 0

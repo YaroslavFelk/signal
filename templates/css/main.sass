@@ -1,0 +1,139 @@
+@font-face
+  font-family: 'ProximaNova'
+  src: url("../assets/fonts/ProximaNova-Regular.ttf") format('woff')
+
+@font-face
+  font-family: 'ProximaNova'
+  src: url("../assets/fonts/ProximaNova-Bold.ttf") format('woff')
+  font-weight: bold
+
+//блок переменных и миксинов
+$mainColor: #7C0905
+$whiteColor: #fff
+$darkColor: #000
+
+@mixin flexColumn
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@mixin flexRow
+  display: flex
+  flex-direction: row
+  align-items: center
+
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+
+body
+  font-family: 'ProximaNova'
+  margin: 0
+  font-size: 15px
+  overflow-x: hidden
+
+.container
+  max-width: 1280px
+  margin: 0 auto
+
+img
+  width: 100%
+  height: auto
+  object-fit: cover
+
+.button
+  border-radius: 3px
+  color: $whiteColor
+  border: 1px solid $mainColor
+  background: $mainColor
+  cursor: pointer
+  position: relative
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  transition: background 0.5s, color 0.5s
+
+  &:hover
+    color: $mainColor
+    background: $whiteColor
+
+
+
+
+
+
+a
+  color: $darkColor
+  text-decoration: none
+
+ul
+  list-style-type: none
+
+h1
+  font-weight: bold
+  font-size: 40px
+
+h2
+  font-weight: bold
+  font-size: 30px
+
+.head
+  display: flex
+  flex-direction: column
+  align-items: center
+
+
+  &__line
+    margin-top: 25px
+    width: 92px
+    height: 1px
+    background: $whiteColor
+
+
+//блок импортов
+@import "header"
+@import "../components/main/style"
+@import "../components/our_works/style"
+@import "../components/about/style"
+@import "../components/partners/style"
+@import "footer"
+
+.middle a
+  text-decoration: none
+  font-size: 1em
+  position: relative
+  transition: all 0.6s
+  &:before
+    content: ""
+    width: 0
+    height: 0.1em
+    position: absolute
+    bottom: 0
+    left: 50%
+    background: $mainColor
+    transition: all 0.3s
+    z-index: 4
+
+  &:hover
+    color: $mainColor
+
+    &:before
+      width: 100%
+      left: 0
+
+@media screen and (max-width: 1320px)
+  .container
+    max-width: 1000px
+
+@media screen and (max-width: 1040px)
+  .container
+    max-width: 100%
+    padding: 0 40px
+
+@media screen and (max-width: 768px)
+  .container
+    padding: 0 20px
+    position: relative

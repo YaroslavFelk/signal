@@ -1,0 +1,299 @@
+.header__top-row
+  padding: 20px 0
+  @include flexRow
+  justify-content: space-between
+
+  &_right-block
+    @include flexRow
+
+  &_button
+    width: 191px
+    height: 50px
+    margin-left: 30px
+
+.logo_block
+  width: 240px
+  height: 80px
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 64%
+    width: 3%
+    height: 35%
+    background: #fff
+    z-index: 10
+    transition-delay: 9s
+
+  & img
+    position: absolute
+    top: 0
+    left: -10px
+    right: 0
+    bottom: 0
+    height: 100%
+
+.logo__anime-line:before
+  width: 0
+
+.logo__anime
+  position: absolute
+  top: 0
+  left: 29%
+  right: 32%
+  height: 65%
+  background: #fff
+  z-index: 10
+  transition: left 9s steps(7, end)
+
+
+
+
+
+.header_contacts
+  @include flexColumn
+  align-items: flex-end
+  line-height: 32px
+
+  &_phone
+    background: url("../assets/img/header__arrow.svg") no-repeat center right
+    padding-right: 20px
+
+  & a
+    color: $darkColor
+    font-size: 22px
+
+    & b
+      font-weight: bold
+
+
+
+.header__number_dropdown
+  display: none
+
+.header__bottom
+  background-color: $mainColor
+  width: 100vw
+
+  &-row
+    @include flexRow
+    justify-content: space-between
+    position: relative
+
+.header__nav
+  @include flexRow
+  height: 100%
+  margin: 16px 0
+  justify-content: space-between
+  padding-left: 0
+
+  & li a
+    margin-right: 65px
+    color: $whiteColor
+    position: relative
+    &:before
+      content: ""
+      width: 0
+      height: 0.1em
+      position: absolute
+      bottom: 0
+      left: 50%
+      background: $whiteColor
+      transition: all 0.3s
+
+    &:hover
+      color: $whiteColor
+
+      &:before
+        width: 100%
+        left: 0
+.header__search_button
+  display: none
+
+.header__search
+  position: relative
+
+.header__search_input
+  width: 359px
+  height: 42px
+  border: none
+  padding-left: 20px
+
+  &::placeholder
+    color: $darkColor
+
+.header__search_submit
+  background: url("../assets/img/search.svg") no-repeat center
+  position: absolute
+  width: 42px
+  height: 42px
+  right: 0
+  top: 1px
+  border: none
+
+.hamburger-icon-container
+  display: none
+  position: relative
+  cursor: pointer
+  width: 25px
+  height: 25px
+
+.hamburger-icon
+  transform: translateY(-50%)
+
+.hamburger-icon,
+.hamburger-icon:before,
+.hamburger-icon:after
+  content: ''
+  position: absolute
+  height: 3px
+  width: 100%
+  background: #fff
+  transition: all .2s ease
+
+
+.hamburger-icon
+  top: 50%
+  &:before
+    top: -8px
+  &:after
+    top: 8px
+
+.hamburger-active .hamburger-icon
+  transform: rotate(45deg) translate(-3px,-3px)
+
+
+.hamburger-active .hamburger-icon:before,
+.hamburger-active .hamburger-icon:after
+  top: 0
+
+
+.hamburger-active .hamburger-icon:before
+  transform: rotate(90deg)
+
+.search-active .header__search
+  width: 100vw
+  background: $mainColor
+  position: absolute
+  top: 34px
+  left: 0
+  display: flex
+  padding: 15px
+  z-index: 100
+
+  & button
+    top: 15px
+    right: 15px
+
+  & input
+    width: 100%
+    border-radius: 3px
+
+@media screen and (max-width: 1320px)
+  .header__search_input
+    width: 259px
+
+  .header__nav li a
+    margin-right: 25px
+
+  .logo_block
+    width: 200px
+
+@media screen and (max-width: 1040px)
+  .header__search
+    display: none
+
+  .header__search_button
+    display: block
+    position: relative
+    top: 0
+    width: 20px
+    height: 20px
+    border: none
+    background: none
+
+    & svg
+      fill: #fff
+      width: 100%
+      height: 100%
+
+  .logo_block
+    width: 160px
+    height: 70px
+
+@media screen and (max-width: 768px)
+
+  .header__bottom
+    padding: 10px 0
+
+  .hamburger-icon-container
+    display: block
+
+  .hamburger-active .header__nav
+    opacity: 1
+    visibility: visible
+
+  .header__nav
+    visibility: hidden
+    position: absolute
+    opacity: 0
+    top: 130px
+    right: -5px
+    width: calc(100vw - 40px)
+    height: auto
+    background: #7C0905
+    flex-direction: column
+    z-index: 100
+    align-items: flex-start
+    transition: opacity 0.5s
+
+    & li
+      margin: 10px 20px
+
+      & a
+        font-size: 1.5rem
+  .header__top-row_button
+    display: none
+
+@media screen and (max-width: 568px)
+
+
+  .header__top-row
+    flex-direction: column
+    padding: 10px 0
+
+
+  .header__top-row_right-block
+    align-self: flex-start
+
+  .header_contacts
+    align-items: flex-start
+    line-height: 22px
+
+    &_address
+      width: 100%
+      font-size: 0.7rem
+
+  .header__bottom
+    display: flex
+    width: 30px
+    border-radius: 3px
+    padding: 5px
+    transition: top 0.5s
+
+    position: absolute
+    top: 84px
+    right: 20px
+
+    &-row
+      padding: 0 !important
+
+    .header__search_button
+      display: none
+
+  .header__nav
+    top: 5px
+
+  .hamburger-active .header__bottom
+    top: 55px

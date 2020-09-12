@@ -1,0 +1,99 @@
+.footer
+  margin-top: 65px
+  margin-bottom: 60px
+  @include flexRow
+  align-items: flex-start
+  justify-content: space-between
+
+  & ul li
+    line-height: 36px
+    font-size: 14px
+
+  & ul li:first-of-type
+    font-weight: bold
+    font-size: 16px
+
+  &__contacts
+    text-align: right
+
+    &_email
+      color: $mainColor
+      text-decoration: underline
+
+      &:hover
+        text-decoration: none
+
+.another-page ul li
+  font-weight: bold
+  font-size: 16px
+
+.not-bold
+  font-weight: normal
+
+.copyright
+  @include  flexRow
+  font-size: 14px
+  line-height: 54px
+
+  justify-content: space-between
+
+  &__background
+    background: #F1F1F1
+
+  & a
+    text-decoration: underline
+
+    &:hover
+      color: $mainColor
+
+.cookie a
+  text-align: right
+
+@media (max-width: 1340px)
+  .copyright
+    flex-wrap: wrap
+
+  .cookie
+    width: 100%
+    order: -1
+
+@media (max-width: 900px)
+  .footer
+    flex-wrap: wrap
+
+  .footer__contacts
+    width: 100%
+    @include flexRow
+    justify-content: space-between
+    margin-top: 30px
+
+  .cookie
+    text-align: center
+
+
+@media (max-width: 600px)
+  .another-page
+    position: absolute
+    top: 150px
+
+  .footer__contacts
+    flex-direction: column
+
+  .footer nav ul li a
+    font-size: 0.8rem
+
+    & li:first-of-type a
+      font-size: 2rem
+
+  .copyright
+    flex-direction: column
+    padding: 0 !important
+    line-height: 2
+
+    & p
+      padding: 10px
+
+    & p:first-of-type
+      width: 100%
+      background: #e2e2e2
+      text-align: center

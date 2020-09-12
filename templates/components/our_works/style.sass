@@ -1,0 +1,201 @@
+.particles
+  background-color: #444B54
+  position: absolute
+  height: 600px
+  width: 100vw
+
+.main__our-works_height
+  height: 600px
+
+.main__our-works
+  margin-top: 75px
+
+
+  &__slider
+    margin: 0 -15px
+    padding-top: 60px
+    z-index: 5
+
+.slick__item
+  padding: 0 15px
+  position: relative
+  opacity: 0.5
+  transition: opacity 0.3s
+  &:hover
+    opacity: 1
+
+
+  &_img
+    position: absolute
+    top: 0
+    left: 10px
+    right: 0
+    bottom: 0
+    width: calc(100% - 20px)
+
+  &_text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    color: $whiteColor
+
+    & h4
+      margin-bottom: 15px
+
+
+  &_content
+    padding: 80px 0 80px 72px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    z-index: 6
+    position: relative
+
+
+    &_img
+      width: 158px
+      height: 158px
+      padding: 15px
+      border-radius: 50%
+      border: 15px solid #690704
+      margin-right: 40px
+
+    & img
+      height: 100%
+      width: auto
+
+
+.slickSlider
+  position: relative
+
+.slick__arrows
+  position: absolute
+  top: calc(50% - 45px)
+  border-radius: 50%
+  width: 46px
+  height: 46px
+  background-image: url("../assets/img/arrow.svg")
+  background-repeat: no-repeat
+  background-position: center
+  background-color: $whiteColor
+  &:hover
+    background-color: $mainColor
+
+  &:focus
+    outline: none
+
+
+  border: none
+
+.prevArrow
+  left: -50px
+  transform: rotate(180deg)
+
+.nextArrow
+  right: -50px
+
+
+.slick-dots
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin-top: 45px
+
+.slick-dots li
+  border-radius: 50%
+  width: 9px
+  height: 9px
+  background: #fff
+  margin: 0 4px
+
+.slick-dots .slick-active
+  background: $mainColor
+
+.slick-dots button
+  visibility: hidden
+
+.main__our-works__head
+  position: relative
+  z-index: 5
+
+.main__our-works__head
+  padding-top: 85px
+  color: $whiteColor
+
+
+
+@media screen and (max-width: 1440px)
+  .main__our-works__slider
+    padding-left: 50px
+    padding-right: 50px
+
+@media screen and (max-width: 1320px)
+  .main__our-works__slider
+    padding-left: 0
+    padding-right: 0
+
+  .slick__item_content
+    padding: 40px 20px
+
+  .slick__arrows
+    top: calc(50% - 45px)
+
+@media screen and (max-width: 1150px)
+  .main__our-works__slider
+    padding-left: 50px
+    padding-right: 50px
+
+@media screen and (max-width: 1150px)
+  .main__our-works_height
+    height: 650px
+
+  .slick__item_content
+    padding: 100px 50px
+
+@media screen and (max-width: 800px)
+  .main__our-works_height
+    height: 580px
+
+  .slick__item_content
+    padding: 50px
+
+@media screen and (max-width: 600px)
+  .main__our-works__slider
+
+
+  .slick__item_content
+    padding: 40px 20px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+
+  .slick__item_content_img
+    margin-right: 0
+    margin-bottom: 20px
+
+  .slick__item_img
+    height: 100%
+
+  .slick__item_content img
+    margin: 0 auto
+
+@media screen and (max-width: 420px)
+  .slick__item_content
+    padding: 40px 20px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+
+  .slick__item_content_img
+    width: 100px
+    height: 100px
+
+
+  .slick__item_img
+    height: 100%
+
+  .slick__item_content img
+    margin: 0 auto

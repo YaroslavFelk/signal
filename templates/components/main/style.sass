@@ -1,0 +1,174 @@
+.main
+  position: relative
+
+.main__wrap
+  width: 100%
+  position: relative
+  min-height: 200px
+
+.main__wrap_line
+  height: 300px
+  position: relative
+  z-index: 3
+
+.icon
+  width: 115px
+  height: 115px
+  border-radius: 50%
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.07)
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: #fff
+
+
+.icon svg
+  width: 50%
+  height: 50%
+  fill: $mainColor
+
+
+.item
+  display: inline-block
+  position: absolute
+  text-align: center
+  @include flexColumn
+
+  &:hover
+    padding: 50px
+    margin-left: -50px
+    margin-top: -50px
+    border-radius: 50%
+    background-color: $mainColor
+    background-image: url("../assets/img/radioLines.svg")
+    background-position: -60px 150px
+    background-repeat: no-repeat
+    box-shadow: 0 10px 20px rgba(208, 72, 62, 0.24)
+    color: $whiteColor
+    & .icon
+      background-color: $mainColor
+      box-shadow: none
+      & svg
+        fill: #fff
+
+  & .text
+    margin-top: 10px
+    max-width: 140px
+
+.item1
+  left: 25%
+  top: 0
+  &:hover .line
+    stroke-width: 0
+    stroke: #fff
+
+
+.item2
+  left: 10%
+  top: 175px
+
+.item3
+  left: 37%
+  top: 175px
+
+.item4
+  left: 55%
+  top: 90px
+
+.item5
+  right: 15%
+  top: 35px
+  &:hover
+    margin-right: -50px
+
+
+.item6
+  right: 5%
+  top: 165px
+  &:hover
+    margin-right: -50px
+
+#svg-line
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  z-index: 2
+
+
+.line
+  stroke: #CFDAE8
+  z-index: 1
+  position: relative
+
+.main__head
+  padding: 100px 0
+  margin: 0 auto
+  text-align: center
+  width: 70%
+
+  &_line
+    display: block
+    width: 100px
+    height: 1px
+    background-color: #000
+    margin: 20px auto 0
+
+.main__button
+  display: block
+  margin: 100px auto 0
+  width: 191px
+  padding: 20px 0
+  text-align: center
+
+@media screen and (max-width: 870px)
+  .item2
+    left: 0
+
+  .item4
+    left: 50%
+
+  .item3
+   left: 30%
+
+  .item1
+   left: 15%
+
+@media screen and (max-width: 680px)
+  h1
+    font-size: 1.8rem
+
+  #svg-line
+    display: none
+
+  .main__wrap_line
+    @include flexRow
+    flex-wrap: wrap
+    height: auto
+
+
+  .item
+    position: static
+    width: 33%
+    @include flexColumn
+
+    & .text
+
+      margin-bottom: 30px
+
+
+@media screen and (max-width: 500px)
+  h1
+    font-size: 1.3rem
+
+  .item
+    width: 50%
+
+    &:hover
+      margin: -25px 0 0
+      padding: 0
+
+
