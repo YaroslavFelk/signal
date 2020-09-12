@@ -67,6 +67,7 @@
 <script src="templates/js/jquery.min.js" defer></script>
 <script src="templates/js/slick/slick.js" defer></script>
 <script src="templates/js/particles.js" defer></script>
+<script src="templates/js/anime.min.js" defer></script>
 
 
 

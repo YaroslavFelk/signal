@@ -28,8 +28,9 @@ function Line(){
          num6X = item6.position().left + item6.width()/2,
          num6Y = item6.offset().top+item1.height()/2- header.height() - mainhead.outerHeight();
 
-    console.log(num1X)
     var svg = $('#svg-line');
+
+
 
     var line12 = svg.find('.line-1-2'),
         line13 = svg.find('.line-1-3'),
@@ -47,11 +48,41 @@ function Line(){
     line46.attr({'x1': num4X, 'y1': num4Y, 'x2': num6X, 'y2': num6Y});
     line56.attr({'x1': num5X, 'y1': num5Y, 'x2': num6X, 'y2': num6Y});
 
-
+    $('#svg-line line').css('stroke', '#CFDAE8')
 }
 
 $(window).on('load resize', function () {
     Line();
 });
+
+$(window).on('load', function () {
+    $('.item').on('mouseenter',function () {
+      const elem = $(this).position()
+      $('#svg-line line').css('stroke', '#fff')
+
+      $('.item').each( function(item) {
+        anime({
+          targets: this,
+          translateX: ($(this).position().left - elem.left) / 5,
+          translateY: ($(this).position().top - elem.top) / 5,
+          duration: 800,
+        });
+      })
+    })
+    $('.item').on('mouseleave',function () {
+
+      $('.item').each( function() {
+        anime({
+          targets: this,
+          translateX: 0,
+          translateY: 0,
+          duration: 800,
+        });
+
+        $('#svg-line line').css('stroke', '#CFDAE8')
+      })
+    })
+})
+
 
 

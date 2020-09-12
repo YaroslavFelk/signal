@@ -24,7 +24,7 @@
     height: 35%
     background: #fff
     z-index: 10
-    transition-delay: 9s
+    transition-delay: 6s
 
   & img
     position: absolute
@@ -45,9 +45,7 @@
   height: 65%
   background: #fff
   z-index: 10
-  transition: left 9s steps(7, end)
-
-
+  transition: left 6s steps(7, end)
 
 
 
@@ -55,6 +53,7 @@
   @include flexColumn
   align-items: flex-end
   line-height: 32px
+  position: relative
 
   &_phone
     background: url("../assets/img/header__arrow.svg") no-repeat center right
@@ -71,6 +70,17 @@
 
 .header__number_dropdown
   display: none
+  position: absolute
+  top: 30px
+  right: 0
+  padding: 10px
+  border: 1px solid $mainColor
+  z-index: 10
+  background: #ffffff
+  border-radius: 3px
+
+.header_contacts_phone:hover + .header__number_dropdown
+  display: block
 
 .header__bottom
   background-color: $mainColor
@@ -239,8 +249,8 @@
     position: absolute
     opacity: 0
     top: 130px
-    right: -5px
-    width: calc(100vw - 40px)
+    right: -25px
+    width: 100vw
     height: auto
     background: #7C0905
     flex-direction: column
