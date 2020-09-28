@@ -26,8 +26,8 @@
                 <button class="button main__about_button ">Подробнее о нас </button>
             </div>
 
-            <div class="map_region" style="width: 100%; position: relative; z-index: 200">
-                <object id="object" type="image/svg+xml" data="templates/assets/img/tt.svg" >
+            <div class="map_region" style="width: 100%; position: relative; z-index: 50; overflow: auto">
+                <object style="min-width: 600px" id="object" type="image/svg+xml" data="templates/assets/img/tt.svg" >
 
                 </object>
                 <svg class="placemark" id="placemark1" x="100" y="100"  viewBox="0 0 37 34" width="5%" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,3 @@
         </div>
     </div>
 </section>
-
-<script>
-
-</script>

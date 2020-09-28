@@ -56,31 +56,41 @@ $(window).on('load resize', function () {
 });
 
 $(window).on('load', function () {
-    $('.item').on('mouseenter',function () {
+    $('.item').on('mouseenter',function (e) {
       const elem = $(this).position()
       $('#svg-line line').css('stroke', '#fff')
 
-      $('.item').each( function(item) {
+      $('.item').each( function() {
         anime({
           targets: this,
           translateX: ($(this).position().left - elem.left) / 5,
           translateY: ($(this).position().top - elem.top) / 5,
-          duration: 800,
+          duration: 1000,
         });
       })
+        // anime({
+        //     targets: this,
+        //     duration: 1200,
+        //     update: Line
+        // });
     })
-    $('.item').on('mouseleave',function () {
-
+    $('.item').on('mouseleave',function (e) {
       $('.item').each( function() {
         anime({
           targets: this,
           translateX: 0,
           translateY: 0,
-          duration: 800,
+          duration: 1000,
         });
 
-        $('#svg-line line').css('stroke', '#CFDAE8')
       })
+        $('#svg-line line').css('stroke', '#CFDAE8')
+        // anime({
+        //     targets: this,
+        //     duration: 1200,
+        //     update: Line
+        // });
+
     })
 })
 
